@@ -1,0 +1,131 @@
+.modal {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: visibility 0.2s linear, opacity 0.2s linear;
+}
+
+.modal_is-opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__container {
+  max-width: 730px;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 32px 50px;
+  position: relative;
+  margin: 0 10px 0 10px;
+  box-sizing: border-box;
+}
+
+.modal__close-button {
+  width: 36px;
+  height: 36px;
+  top: 32px;
+  right: 50px;
+  position: absolute;
+  background: transparent url(../images/Closeicon.svg) center no-repeat;
+  padding: 0;
+  border-color: transparent;
+  opacity: 0.4;
+  transition: 0.2s;
+}
+
+.modal__close-button:hover {
+  cursor: pointer;
+  width: 35px;
+  height: 44px;
+}
+
+.modal__title {
+  margin: 0 0 32px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  padding: 4px 0 4px;
+  color: rgba(33, 33, 33, 1);
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__input {
+  display: block;
+  margin: 8px 0 0;
+  border-radius: 8px;
+  border-color: rgba(33, 33, 33, 0.4);
+  width: 100%;
+  padding: 16px 0 16px 12px;
+}
+
+.modal__label {
+  margin: 0 0 32px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: 0%;
+  color: rgba(33, 33, 33, 0.7);
+}
+
+.modal__input::placeholder {
+  color: #2121214d;
+}
+
+.modal__submit-button {
+  max-width: 156px;
+  height: 52px;
+  border-radius: 8px;
+  background-color: rgba(33, 33, 33, 1);
+  color: rgba(252, 245, 229, 1);
+}
+
+.modal__submit-button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 627px) {
+  .modal__submit-button {
+    max-width: none;
+    width: 100%;
+  }
+
+  .modal__label {
+    margin-bottom: 24px;
+  }
+
+  .modal__title {
+    padding: 10px;
+    margin: 0 0 24px;
+  }
+
+  .modal__close-button {
+    top: 12px;
+    right: 12px;
+  }
+
+  .modal__container {
+    padding: 12px 32px;
+    max-width: none;
+    height: 336px;
+    width: 300px;
+  }
+
+  .modal__input {
+    width: 100%;
+  }
+}
